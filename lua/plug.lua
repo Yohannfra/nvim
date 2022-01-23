@@ -53,4 +53,9 @@ Plug 'Yohannfra/Vim-Goto-Header'
 Plug ('Yohannfra/Vim-Protect-Header', {on = 'Protect'})
 Plug 'Yohannfra/Vim-Vim-Project'
 
+-- icons
+Plug 'kyazdani42/nvim-web-devicons'
+
 vim.call('plug#end')
+
+require('plugins/telescope')

@@ -114,18 +114,5 @@ map('i', '<PageDown>', '<nop>')
 map('n', '<C-d>', '#Ncgn')
 map('v', '<C-d>', 'y/<C-r>"<CR>Ncgn')
 
--- exit telescope on first <Esc>
-local actions = require("telescope.actions")
-
-require("telescope").setup({
-    defaults = {
-        mappings = {
-            i = {
-                ["<esc>"] = actions.close,
-            },
-        },
-    },
-})
-
 -- highlight word under cursor
 map('n', 'm', ':match Error "<C-R><C-W>"<CR>')

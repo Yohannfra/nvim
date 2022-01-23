@@ -1,5 +1,5 @@
 -- Strip whitespace when save
--- vim.cmd('autocmd BufWritePre * %s/\\s\\+$//e')
+vim.cmd('autocmd BufWritePre * %s/\\s\\+$//e')
 
 -- Comment string for asm files
 vim.cmd('autocmd FileType asm setlocal commentstring=;\\ %s')

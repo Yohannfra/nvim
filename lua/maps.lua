@@ -116,3 +116,30 @@ map('v', '<C-d>', 'y/<C-r>"<CR>Ncgn')
 
 -- highlight word under cursor
 map('n', 'm', ':match Error "<C-R><C-W>"<CR>')
+
+-- coc config
+vim.cmd [[
+function! Cdinnewtab()
+    let pos = getpos('.')
+    let y = pos[1] - 1
+    let x = pos[2] - 1
+
+    execute ":tabedit % | norm" . y . "j"
+    execute "norm" . x . "l"
+    call CocAction('jumpDefinition')
+endfunction
+nnoremap <silent> <Leader>cd :call Cdinnewtab() <CR>
+
+nmap <silent> cd <Plug>(coc-definition)
+nmap <silent> cr <Plug>(coc-references)
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+]]

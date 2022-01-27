@@ -19,7 +19,7 @@ Plug 'sheerun/vim-polyglot'
 Plug('neoclide/coc.nvim', {branch = 'release'})
 
 -- File explorer
-Plug 'tpope/vim-vinegar'
+-- Plug 'tpope/vim-vinegar'
 
 -- snipets
 Plug 'joereynolds/vim-minisnip'
@@ -55,7 +55,11 @@ Plug 'Yohannfra/Vim-Vim-Project'
 
 -- icons
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
 
 vim.call('plug#end')
 
+-- configure plugins
 require('plugins/telescope')
+require('plugins/doxygen_toolkit')
+require('plugins/nvim_tree')

@@ -47,3 +47,7 @@ vim.cmd [[
 autocmd FileType make setlocal noexpandtab shiftwidth=8 softtabstop=0
 autocmd FileType go setlocal noexpandtab shiftwidth=4 softtabstop=0
 ]]
+
+-- vim.cmd [[
+-- autocmd FileType c,cpp ClangFormatAutoEnable
+-- ]]

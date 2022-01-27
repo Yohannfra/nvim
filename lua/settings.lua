@@ -27,7 +27,7 @@ opt.errorbells = false
 opt.vb = false
 
 -- Set unix file format (LF)
-opt.fileformats = 'unix'
+-- opt.fileformats = 'unix'
 
 -- No swap file
 opt.swapfile = false
@@ -54,7 +54,7 @@ opt.ruler = true
 -- always show status line
 opt.laststatus = 2
 
--- Setting colorcolumn. 
+-- Setting colorcolumn.
 opt.colorcolumn = '81'
 
 -- Set indentation stuf.

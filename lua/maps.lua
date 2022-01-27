@@ -15,11 +15,21 @@ map('n', '<Leader>m', ':match none <CR> :noh <CR>h')
 map('n', '<Leader><Leader>', '.')
 
 -- Line navigation
+vim.cmd [[
+function! ExtendedHome()
+    let column = col('.')
+    normal! ^
+    if column == col('.')
+        normal! 0
+    endif
+endfunction
+]]
 
 map('v', 'L', '$')
 map('n', 'L', '$')
+map('n', 'H', ':call ExtendedHome()<CR>')
+map('n', '0', ':call ExtendedHome()<CR>')
 map('v', 'H', '0')
-map('n', 'H', '0') -- todo
 
 -- tabs navigation
 map('n', 'gr', 'gT')
@@ -105,8 +115,8 @@ map('n', ',', ';')
 
 -- Disable pageup and pagedown
 map('n', '<PageUp>', '<nop>')
-map('i', '<PageDown>', '<nop>')
-map('n', '<PageUp>', '<nop>')
+map('n', '<PageDown>', '<nop>')
+map('i', '<PageUp>', '<nop>')
 map('i', '<PageDown>', '<nop>')
 
 
@@ -143,3 +153,7 @@ endfunction
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 ]]
+
+map('n', '<C-n>', ':NvimTreeToggle<CR>')
+
+map('n', 'gh', ':GotoHeaderSwitch<CR>')

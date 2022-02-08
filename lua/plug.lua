@@ -57,6 +57,9 @@ Plug 'Yohannfra/Vim-Vim-Project'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 
+-- git lens like
+Plug 'APZelos/blamer.nvim'
+
 vim.call('plug#end')
 
 -- configure plugins

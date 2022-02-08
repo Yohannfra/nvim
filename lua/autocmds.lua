@@ -37,6 +37,7 @@ augroup END
 -- a few syntax
 vim.cmd [[
 autocmd BufNewFile,BufRead *.emProject set filetype=html
+autocmd BufNewFile,BufRead *.overlay set filetype=dts
 autocmd BufNewFile,BufRead *.csv set filetype=text
 autocmd BufNewFile,BufRead pymakr.conf set filetype=json
 autocmd BufNewFile,BufRead sdkconfig.defaults set filetype=conf

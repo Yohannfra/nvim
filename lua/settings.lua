@@ -26,8 +26,9 @@ opt.undofile = true
 opt.errorbells = false
 opt.vb = false
 
--- Set unix file format (LF)
+-- Set file format
 -- opt.fileformats = 'unix'
+-- opt.fileformats = 'dos'
 
 -- No swap file
 opt.swapfile = false

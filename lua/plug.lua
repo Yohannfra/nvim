@@ -15,6 +15,9 @@ Plug 'nvim-telescope/telescope.nvim'
 -- better syntax highlights
 Plug 'sheerun/vim-polyglot'
 
+-- Quick text alignment
+Plug 'godlygeek/tabular'
+
 -- coc
 Plug('neoclide/coc.nvim', {branch = 'release'})
 
@@ -38,8 +41,9 @@ Plug ('tell-k/vim-autopep8', { on = 'Autopep8' })
 Plug ('rhysd/vim-clang-format', {['for'] = 'c'})
 Plug 'Yohannfra/DoxygenToolkit.vim'
 
+Plug 'Yohannfra/soulver3.vim'
+
 -- js / ts
--- Plug ('prettier/vim-prettier', { do = 'yarn install', for = ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] })
 
 -- rainbow brackets/parenthesis
 Plug 'luochen1990/rainbow'
@@ -66,3 +70,7 @@ vim.call('plug#end')
 require('plugins/telescope')
 require('plugins/doxygen_toolkit')
 require('plugins/nvim_tree')
+
+vim.cmd [[
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+]]

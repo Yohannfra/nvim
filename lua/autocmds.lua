@@ -18,6 +18,17 @@ augroup highlight_t_in_c
     autocmd Syntax c,cpp syntax match cStructure /\w*_e\s/
     autocmd Syntax c,cpp syntax match cStructure /\w*_e;/
     autocmd Syntax c,cpp syntax match cStructure /\w*_e)/
+
+     autocmd Syntax c,cpp syntax match cType /u8/
+     autocmd Syntax c,cpp syntax match cType /i8/
+     autocmd Syntax c,cpp syntax match cType /u16/
+     autocmd Syntax c,cpp syntax match cType /i16/
+     autocmd Syntax c,cpp syntax match cType /u32/
+     autocmd Syntax c,cpp syntax match cType /i32/
+     autocmd Syntax c,cpp syntax match cType /u64/
+     autocmd Syntax c,cpp syntax match cType /i64/
+     autocmd Syntax c,cpp syntax match cType /f32/
+     autocmd Syntax c,cpp syntax match cType /f64/
 augroup end
 ]]
 

@@ -52,8 +52,8 @@ opt.autoread = true
 -- Disable default ruler (bar at the bottom)
 opt.ruler = true
 
--- always show status line
-opt.laststatus = 2
+-- always show status line and one status line for all splits
+opt.laststatus = 3
 
 -- Setting colorcolumn.
 opt.colorcolumn = '81'

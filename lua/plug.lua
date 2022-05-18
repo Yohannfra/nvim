@@ -38,7 +38,7 @@ Plug 'tpope/vim-surround'
 Plug ('tell-k/vim-autopep8', { on = 'Autopep8' })
 
 -- c/c++
-Plug ('rhysd/vim-clang-format', {['for'] = 'c'})
+Plug ('rhysd/vim-clang-format', {['for'] = {'c', 'cpp'}})
 Plug 'Yohannfra/DoxygenToolkit.vim'
 
 Plug 'Yohannfra/soulver3.vim'

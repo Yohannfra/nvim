@@ -1,11 +1,13 @@
 -- Strip whitespace when save
-vim.cmd('autocmd BufWritePre * %s/\\s\\+$//e')
+-- vim.cmd('autocmd BufWritePre * %s/\\s\\+$//e')
+
+-- vim.api.nvim_create_autocmd('BufWritePre', {pattern="*", command='%s/\\s\\+$//e'})
 
 -- Comment string for asm files
-vim.cmd('autocmd FileType asm setlocal commentstring=;\\ %s')
+vim.api.nvim_create_autocmd('FileType', {pattern="asm", command='setlocal commentstring=;\\ %s'})
 
 -- Comment string for .Xressources
-vim.cmd('autocmd FileType xdefaults setlocal commentstring=!\\ %s')
+vim.api.nvim_create_autocmd('FileType', {pattern="xdefaults", command='setlocal commentstring=!\\ %s'})
 
 -- Highlight _t in c and in cpp
 vim.cmd [[
@@ -33,7 +35,11 @@ augroup end
 ]]
 
 -- highlight yank
- vim.cmd('autocmd TextYankPost * silent! lua vim.highlight.on_yank {timeout=200}')
+vim.api.nvim_create_autocmd('TextYankPost', {pattern="*",
+        callback=function()
+            vim.highlight.on_yank({timeout=200})
+        end
+    })
 
 -- Return to last edit position when opening files
 vim.cmd [[
@@ -46,13 +52,11 @@ augroup END
 ]]
 
 -- a few syntax
-vim.cmd [[
-autocmd BufNewFile,BufRead *.emProject set filetype=html
-autocmd BufNewFile,BufRead *.overlay set filetype=dts
-autocmd BufNewFile,BufRead *.csv set filetype=text
-autocmd BufNewFile,BufRead pymakr.conf set filetype=json
-autocmd BufNewFile,BufRead sdkconfig.defaults set filetype=conf
-]]
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.emProject", command='set filetype=xml'})
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.mm", command='set filetype=cpp'})
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.overlay", command='set filetype=dts'})
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="pymakr.conf", command='set filetype=json'})
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="sdkconfig.defaults", command='set filetype=conf'})
 
 -- Indent settings for Makefile / go
 vim.cmd [[

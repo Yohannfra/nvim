@@ -7,6 +7,7 @@ opt.shell = '/bin/zsh'
 -- Fold method
 opt.foldmethod = 'indent'
 opt.foldlevelstart = 99
+opt.foldlevel = 99
 
 -- Number settings.
 opt.number = true
@@ -105,3 +106,17 @@ opt.ttimeoutlen = 100
 
 -- enable rainbow brackets
 vim.api.nvim_set_var('rainbow_active', 1)
+
+-- for neovide
+vim.cmd [[
+" Allow copy paste in neovim
+let g:neovide_input_use_logo = 1
+map <D-v> "+p<CR>
+map! <D-v> <C-R>+
+tmap <D-v> <C-R>+
+vmap <D-c> "+y<CR> 
+
+let g:neovide_cursor_vfx_mode = "ripple"
+
+set guifont=JetBrains\ Mono:h14
+]]

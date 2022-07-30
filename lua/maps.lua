@@ -14,6 +14,18 @@ map('n', '<Leader>m', ':match none <CR> :noh <CR>h')
 -- Map leader as .
 map('n', '<Leader><Leader>', '.')
 
+-- TODO
+function MyExtendHome2()
+    local col = vim.api.nvim_win_get_cursor(0)[2]
+    -- print(col)
+    vim.api.nvim_feedkeys('$', 'n', false)
+        print(col, vim.api.nvim_win_get_cursor(0)[2])
+    -- if col == vim.api.nvim_win_get_cursor(0)[2] then
+    --     print(col, vim.api.nvim_win_get_cursor(0)[2])
+    -- --     vim.api.nvim_feedkeys('0', 'n', false)
+    -- end
+end
+
 -- Line navigation
 vim.cmd [[
 function! ExtendedHome()
@@ -74,7 +86,6 @@ map('i', '<C-s>', '<Esc>:w<CR>')
 -- a few abbrev
 vim.cmd('cabbrev tn tabnew')
 vim.cmd('cabbrev te tabedit')
-vim.cmd('cabbrev Fix CocFix')
 
 map('n', '\\1', '1gt')
 map('n', '\\2', '2gt')

@@ -4,6 +4,7 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 
 -- theme
 Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
 
 -- Autoclose brackets parenthesis
 Plug 'Townk/vim-autoclose'
@@ -64,13 +65,21 @@ Plug 'kyazdani42/nvim-tree.lua'
 -- git lens like
 Plug 'APZelos/blamer.nvim'
 
+Plug 'b0o/incline.nvim'
+
 vim.call('plug#end')
 
 -- configure plugins
 require('plugins/telescope')
 require('plugins/doxygen_toolkit')
 require('plugins/nvim_tree')
+require('plugins/incline')
 
 vim.cmd [[
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+
+
+" Apply AutoFix to problem on the current line.
+nmap <leader>cf  <Plug>(coc-fix-current)
 ]]
+

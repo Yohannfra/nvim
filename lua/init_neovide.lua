@@ -1,5 +1,3 @@
-vim.cmd [[
-if exists("g:neovide")
-    execute ":cd"
-endif
-]]
+if vim.g.neovide then
+    vim.fn.execute(":cd")
+end

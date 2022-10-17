@@ -21,6 +21,7 @@ Plug 'godlygeek/tabular'
 
 -- coc
 Plug('neoclide/coc.nvim', {branch = 'release'})
+-- Plug 'neovim/nvim-lspconfig'
 
 -- File explorer
 -- Plug 'tpope/vim-vinegar'
@@ -81,5 +82,7 @@ command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 " Apply AutoFix to problem on the current line.
 nmap <leader>cf  <Plug>(coc-fix-current)
+
+let g:Protect_Header_cpp_extern_c = 1
 ]]
 

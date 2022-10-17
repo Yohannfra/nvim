@@ -99,6 +99,9 @@ opt.showtabline = 2
 -- Show current find and replace in a split
 opt.inccommand = 'split'
 
+-- Disable modeline parsing
+opt.modeline = false
+
 -- less input lags
 opt.ttimeoutlen = 100
 

@@ -120,6 +120,4 @@ tmap <D-v> <C-R>+
 vmap <D-c> "+y<CR> 
 
 let g:neovide_cursor_vfx_mode = "ripple"
-
-set guifont=JetBrains\ Mono:h14
 ]]

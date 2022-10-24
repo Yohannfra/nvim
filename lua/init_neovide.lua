@@ -9,3 +9,5 @@ if vim.g.neovide then
 end
 
 map('n', '<C-b>n', ':echo "Use alt+tab to switch to terminal"<CR>')
+
+vim.opt.guifont = { "JetBrainsMono Nerd Font Mono", "h13" }

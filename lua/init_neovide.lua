@@ -15,5 +15,6 @@ map('n', '<C-b>s', ':echo "Use alt+tab to switch to terminal"<CR>')
 map('n', '<C-b>v', ':echo "Use alt+tab to switch to terminal"<CR>')
 map('n', '<C-b>l', ':echo "Use alt+tab to switch to terminal"<CR>')
 map('n', '<C-b>h', ':echo "Use alt+tab to switch to terminal"<CR>')
+map('n', '<C-b><Esc>', ':echo "Use alt+tab to switch to terminal"<CR>')
 
 vim.opt.guifont = { "JetBrainsMono Nerd Font Mono", "h13" }

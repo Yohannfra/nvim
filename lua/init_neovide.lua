@@ -18,3 +18,5 @@ map('n', '<C-b>h', ':echo "Use alt+tab to switch to terminal"<CR>')
 map('n', '<C-b><Esc>', ':echo "Use alt+tab to switch to terminal"<CR>')
 
 vim.opt.guifont = { "JetBrainsMono Nerd Font Mono", "h13" }
+
+vim.g.neovide_hide_mouse_when_typing = true

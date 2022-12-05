@@ -1,0 +1,3 @@
+{{+Var+}} = malloc(sizeof({{+ITEM+}}));
+if ({{+~\~2+}} == NULL)
+    {{++}}

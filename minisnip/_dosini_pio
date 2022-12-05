@@ -1,0 +1,17 @@
+[platformio]
+default_envs = debug
+
+[env]
+platform = atmelavr
+board = nanoatmega328
+framework = arduino
+build_flags = -Wall -Wextra
+
+[env:debug]
+build_type = debug
+build_flags = ${env.build_flags}
+              -DDEBUG
+
+[env:release]
+build_flags = ${env.build_flags}
+              -Werror

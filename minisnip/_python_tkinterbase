@@ -1,0 +1,13 @@
+from tkinter import *
+
+class {{+NAME+}}:
+    def __init__(self):
+        self.fen = Tk()
+        self.fen.bind_all("<Escape>", self.quit)
+        self.fen.mainloop()
+
+    def quit(self, event=None):
+        self.fen.quit()
+        self.fen.destroy()
+
+{{+~\~1+}}()

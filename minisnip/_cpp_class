@@ -1,0 +1,7 @@
+class {{+ClassName+}} {
+    public:
+        {{+~\~1+}}();
+        ~{{+~\~1+}}();
+
+    private:
+};

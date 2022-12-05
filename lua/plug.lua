@@ -75,6 +75,7 @@ require('plugins/telescope')
 require('plugins/doxygen_toolkit')
 require('plugins/nvim_tree')
 require('plugins/incline')
+require('plugins/minisnip')
 
 vim.cmd [[
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument

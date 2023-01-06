@@ -1,5 +1,5 @@
 vim.cmd 'colorscheme gruvbox'
--- vim.cmd [[
--- set background=light
--- colorscheme PaperColor
--- ]]
+
+vim.opt.background = 'dark'
+
+-- vim.opt.background = 'light'

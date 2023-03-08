@@ -68,6 +68,8 @@ Plug 'APZelos/blamer.nvim'
 
 Plug 'b0o/incline.nvim'
 
+Plug 'prisma/vim-prisma'
+
 vim.call('plug#end')
 
 -- configure plugins

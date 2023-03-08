@@ -53,6 +53,7 @@ augroup END
 
 -- a few syntax
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.emProject", command='set filetype=xml'})
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.test", command='set filetype=sh'})
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.mm", command='set filetype=cpp'})
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.overlay", command='set filetype=dts'})
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="pymakr.conf", command='set filetype=json'})

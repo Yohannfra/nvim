@@ -1,6 +1,6 @@
-require('plug')
-
 require('settings')
+
+require('plug')
 
 require('maps')
 

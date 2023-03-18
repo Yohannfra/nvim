@@ -70,6 +70,8 @@ Plug 'b0o/incline.nvim'
 
 Plug 'prisma/vim-prisma'
 
+Plug 'norcalli/nvim-colorizer.lua'
+
 vim.call('plug#end')
 
 -- configure plugins
@@ -78,6 +80,7 @@ require('plugins/doxygen_toolkit')
 require('plugins/nvim_tree')
 require('plugins/incline')
 require('plugins/minisnip')
+require('plugins/nvim-colorizer')
 
 vim.cmd [[
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument

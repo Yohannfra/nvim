@@ -72,6 +72,11 @@ Plug 'prisma/vim-prisma'
 
 Plug 'norcalli/nvim-colorizer.lua'
 
+
+vim.cmd [[
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+]]
+
 vim.call('plug#end')
 
 -- configure plugins
@@ -81,6 +86,7 @@ require('plugins/nvim_tree')
 require('plugins/incline')
 require('plugins/minisnip')
 require('plugins/nvim-colorizer')
+require('plugins/treesister')
 
 vim.cmd [[
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument

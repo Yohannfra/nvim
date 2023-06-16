@@ -23,3 +23,5 @@ nnoremap <Enter> O<Esc>j
 nnoremap ; :
 vnoremap ; :
 nnoremap " :
+
+ccabrev tn tabnew

@@ -8,6 +8,8 @@
 " set numbers
 set nu
 
+syntax enable
+
 nnoremap L $
 vnoremap L $
 

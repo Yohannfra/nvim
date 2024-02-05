@@ -155,9 +155,6 @@ nnoremap <silent> <Leader>cd :call Cdinnewtab() <CR>
 nmap <silent> cd <Plug>(coc-definition)
 nmap <silent> cr <Plug>(coc-references)
 
-inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
-
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')

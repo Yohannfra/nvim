@@ -91,6 +91,9 @@ require('plugins/treesister')
 vim.cmd [[
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
+" Fix coc weird bug when using up/down arrows
+inoremap <Up> <Up>
+inoremap <Down> <Down>
 
 " Apply AutoFix to problem on the current line.
 nmap <leader>cf  <Plug>(coc-fix-current)

@@ -7,7 +7,7 @@ Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
 
 -- Autoclose brackets parenthesis
-Plug 'Townk/vim-autoclose'
+Plug 'jiangmiao/auto-pairs'
 
 -- telescope
 Plug 'nvim-lua/plenary.nvim'
@@ -90,10 +90,6 @@ require('plugins/treesister')
 
 vim.cmd [[
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
-
-" Fix coc weird bug when using up/down arrows
-inoremap <Up> <Up>
-inoremap <Down> <Down>
 
 " Apply AutoFix to problem on the current line.
 nmap <leader>cf  <Plug>(coc-fix-current)

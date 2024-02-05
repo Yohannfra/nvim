@@ -58,6 +58,9 @@ vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.mm", command=
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.overlay", command='set filetype=dts'})
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="pymakr.conf", command='set filetype=json'})
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="sdkconfig.defaults", command='set filetype=conf'})
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.local", command='set filetype=sh'})
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.template", command='set filetype=sh'})
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.dev", command='set filetype=sh'})
 
 -- Indent settings for Makefile / go
 vim.cmd [[

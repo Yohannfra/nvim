@@ -9,10 +9,6 @@ Plug 'NLKNguyen/papercolor-theme'
 -- Autoclose brackets parenthesis
 Plug 'jiangmiao/auto-pairs'
 
--- telescope
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-
 -- better syntax highlights
 Plug 'sheerun/vim-polyglot'
 
@@ -76,6 +72,11 @@ Plug 'norcalli/nvim-colorizer.lua'
 vim.cmd [[
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 ]]
+
+-- telescope (this MUST be the last loaded plugin)
+-- (https://www.reddit.com/r/neovim/comments/13ybxld/treesitter_error_in_telescope_preview/)
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 vim.call('plug#end')
 

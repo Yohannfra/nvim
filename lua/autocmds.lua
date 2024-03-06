@@ -5,6 +5,7 @@
 
 -- Comment string for asm files
 vim.api.nvim_create_autocmd('FileType', {pattern="asm", command='setlocal commentstring=;\\ %s'})
+vim.api.nvim_create_autocmd('FileType', {pattern="c", command='setlocal commentstring=//\\ %s'})
 
 -- Comment string for .Xressources
 vim.api.nvim_create_autocmd('FileType', {pattern="xdefaults", command='setlocal commentstring=!\\ %s'})

@@ -18,7 +18,12 @@ opt.relativenumber = true
 opt.termguicolors = true
 
 -- Enable clipboard.
-opt.clipboard = 'unnamed'
+
+if vim.loop.os_uname().sysname == "Linux" then
+    opt.clipboard = 'unnamedplus'
+else
+    opt.clipboard = 'unnamed'
+end
 
 -- Persistent undo
 opt.undofile = true

@@ -4,7 +4,6 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 
 -- theme
 Plug 'morhetz/gruvbox'
-Plug 'NLKNguyen/papercolor-theme'
 
 -- Autoclose brackets parenthesis
 Plug 'jiangmiao/auto-pairs'

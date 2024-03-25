@@ -3,7 +3,7 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
 -- theme
-Plug 'morhetz/gruvbox'
+Plug 'ellisonleao/gruvbox.nvim'
 
 -- Autoclose brackets parenthesis
 Plug 'jiangmiao/auto-pairs'

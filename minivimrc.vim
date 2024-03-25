@@ -5,8 +5,7 @@
 " Or create a shell alias:
 " alias mvim='nvim -u ~/.config/nvim/minivimrc.vim'
 
-" set numbers
-set nu
+set number
 
 syntax enable
 
@@ -20,10 +19,8 @@ nnoremap gr gT
 
 inoremap jk <Esc>l
 
-" nnoremap <Enter> O<Esc>j
-
 nnoremap ; :
 vnoremap ; :
 nnoremap " :
 
-ccabrev tn tabnew
+cabbrev tn tabnew

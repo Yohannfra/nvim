@@ -70,10 +70,7 @@ Plug 'prisma/vim-prisma'
 
 Plug 'norcalli/nvim-colorizer.lua'
 
-
-vim.cmd [[
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-]]
+Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 
 -- telescope (this MUST be the last loaded plugin)
 -- (https://www.reddit.com/r/neovim/comments/13ybxld/treesitter_error_in_telescope_preview/)
@@ -94,4 +91,3 @@ require('plugins/treesister')
 vim.cmd [[
 let g:Protect_Header_cpp_extern_c = 1
 ]]
-

@@ -20,7 +20,7 @@ nnoremap gr gT
 
 inoremap jk <Esc>l
 
-nnoremap <Enter> O<Esc>j
+" nnoremap <Enter> O<Esc>j
 
 nnoremap ; :
 vnoremap ; :

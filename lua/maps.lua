@@ -61,7 +61,7 @@ map('n', '<C-g>', ':%s/')
 map('x', '<C-g>', ':%s/')
 
 -- map enter to add empty new line
-map('n', '<Enter>', 'O<Esc>j')
+-- map('n', '<Enter>', 'O<Esc>j') (this break the quickfix)
 
 -- for typos when pressing :
 map('n', ';', ':')
@@ -119,9 +119,6 @@ map('n',  '<C-l>', '<C-W>l')
 map('n',  '<C-k>', '<C-W>k')
 map('n',  '<C-j>', '<C-W>j')
 
--- call CocSearch
-map('n', 'C', ':CocSearch<Space>')
-
 -- Repeat last f or t
 map('n', ',', ';')
 
@@ -139,33 +136,4 @@ map('v', '<C-d>', 'y/<C-r>"<CR>Ncgn')
 -- highlight word under cursor
 map('n', 'm', ':match Error "<C-R><C-W>"<CR>')
 
--- coc config
-vim.cmd [[
-function! Cdinnewtab()
-    let pos = getpos('.')
-    let y = pos[1] - 1
-    let x = pos[2] - 1
-
-    execute ":tabedit % | norm" . y . "j"
-    execute "norm" . x . "l"
-    call CocAction('jumpDefinition')
-endfunction
-nnoremap <silent> <Leader>cd :call Cdinnewtab() <CR>
-
-nmap <silent> cd <Plug>(coc-definition)
-nmap <silent> cr <Plug>(coc-references)
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-]]
-
 map('n', '<C-n>', ':NvimTreeToggle<CR>')
-
-map('n', 'gh', ':GotoHeaderSwitch<CR>')

@@ -14,9 +14,8 @@ Plug 'sheerun/vim-polyglot'
 -- Quick text alignment
 Plug 'godlygeek/tabular'
 
--- coc
-Plug('neoclide/coc.nvim', {branch = 'release'})
--- Plug 'neovim/nvim-lspconfig'
+-- lsp
+Plug 'neovim/nvim-lspconfig'
 
 -- File explorer
 -- Plug 'tpope/vim-vinegar'
@@ -50,7 +49,6 @@ Plug 'airblade/vim-gitgutter'
 
 -- my plugins
 Plug 'Yohannfra/Vim-Flip'
-Plug 'Yohannfra/Vim-Goto-Header'
 Plug ('Yohannfra/Vim-Protect-Header', {on = 'Protect'})
 Plug 'Yohannfra/Vim-Vim-Project'
 
@@ -89,11 +87,6 @@ require('plugins/nvim-colorizer')
 require('plugins/treesister')
 
 vim.cmd [[
-command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
-
-" Apply AutoFix to problem on the current line.
-nmap <leader>cf  <Plug>(coc-fix-current)
-
 let g:Protect_Header_cpp_extern_c = 1
 ]]
 

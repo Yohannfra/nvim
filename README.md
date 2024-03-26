@@ -19,4 +19,7 @@ npm install -g typescript-language-server typescript
 
 # python
 npm i -g pyright
+
+# rust
+ rustup component add rust-analyzer
 ```

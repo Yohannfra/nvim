@@ -1,9 +1,24 @@
+local function my_on_attach(bufnr)
+  local api = require "nvim-tree.api"
+
+  local function opts(desc)
+    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
+  -- default mappings
+  api.config.mappings.default_on_attach(bufnr)
+
+  -- Restore scroll with C-e
+  vim.keymap.del('n', '<C-e>', { buffer = bufnr })
+end
+
 require('nvim-tree').setup {
   disable_netrw       = true,
   hijack_netrw        = true,
   open_on_tab         = false,
   hijack_cursor       = false,
   update_cwd          = false,
+  on_attach = my_on_attach,
   diagnostics = {
     enable = false,
     icons = {

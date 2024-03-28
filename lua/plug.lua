@@ -86,7 +86,7 @@ require('plugins/nvim_tree')
 require('plugins/incline')
 require('plugins/minisnip')
 require('plugins/nvim-colorizer')
-require('plugins/treesister')
+require('plugins/treesitter')
 
 vim.cmd [[
 let g:Protect_Header_cpp_extern_c = 1

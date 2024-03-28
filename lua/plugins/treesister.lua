@@ -18,6 +18,7 @@ require('nvim-treesitter.configs').setup {
     "json",
     "prisma",
     "toml",
+    "vimdoc",
   },
 
   highlight = {

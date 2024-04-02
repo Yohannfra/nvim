@@ -137,4 +137,4 @@ map('v', '<C-d>', 'y/<C-r>"<CR>Ncgn')
 -- highlight word under cursor
 map('n', 'm', ':match Error "<C-R><C-W>"<CR>')
 
-map('n', '<C-n>', ':NvimTreeToggle<CR>')
+map('n', '<C-n>', ':NvimTreeFindFileToggle<CR>')

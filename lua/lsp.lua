@@ -40,6 +40,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.keymap.set('n', 'ci', vim.lsp.buf.implementation, opts)
       vim.keymap.set('n', 'cn', vim.lsp.buf.rename, opts)
 
+      vim.keymap.set('n', '[[', vim.diagnostic.goto_prev, opts)
+      vim.keymap.set('n', ']]', vim.diagnostic.goto_next, opts)
+
       -- List all references
       vim.keymap.set('n', 'cr', vim.lsp.buf.references, opts)
 

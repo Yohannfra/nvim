@@ -129,6 +129,9 @@ map('n', '<PageDown>', '<nop>')
 map('i', '<PageUp>', '<nop>')
 map('i', '<PageDown>', '<nop>')
 
+-- Jump between git chunks super easily
+map('n', '<C-]>', ':GitGutterNextHunk<CR>')
+map('n', '<C-[>', ':GitGutterPrevHunk<CR>')
 
 -- Kind of find and replace
 map('n', '<C-d>', '#Ncgn')

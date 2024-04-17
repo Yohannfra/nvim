@@ -53,6 +53,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- Switch for c/c++ files
     vim.keymap.set('n', 'gh', ':ClangdSwitchSourceHeader<CR>')
+    vim.keymap.set('n', 'E', ':lua vim.diagnostic.open_float()<CR>')
   end,
 })
 

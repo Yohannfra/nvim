@@ -141,3 +141,5 @@ map('v', '<C-d>', 'y/<C-r>"<CR>Ncgn')
 map('n', 'm', ':match Error "<C-R><C-W>"<CR>')
 
 map('n', '<C-n>', ':NvimTreeFindFileToggle<CR>')
+
+vim.api.nvim_create_user_command('GitDiff', 'GitGutterDiffOrig', {})

@@ -1,119 +1,116 @@
--- Defining alias for vim.opt.
-local opt = vim.opt
-
 -- Set default shell
-opt.shell = '/bin/zsh'
+vim.opt.shell = '/bin/zsh'
 
 -- Fold method
-opt.foldmethod = 'indent'
-opt.foldlevelstart = 99
-opt.foldlevel = 99
+vim.opt.foldmethod = 'indent'
+vim.opt.foldlevelstart = 99
+vim.opt.foldlevel = 99
 
 -- Vim delay for updating gitgutter
-opt.updatetime = 300
+vim.opt.updatetime = 300
 
 -- Number settings.
-opt.number = true
-opt.numberwidth = 2
-opt.relativenumber = true
+vim.opt.number = true
+vim.opt.numberwidth = 2
+vim.opt.relativenumber = true
 
 -- True collor support.
-opt.termguicolors = true
+vim.opt.termguicolors = true
 
 -- Enable clipboard.
 
 if vim.loop.os_uname().sysname == "Linux" then
-    opt.clipboard = 'unnamedplus'
+    vim.opt.clipboard = 'unnamedplus'
 else
-    opt.clipboard = 'unnamed'
+    vim.opt.clipboard = 'unnamed'
 end
 
 -- Persistent undo
-opt.undofile = true
+vim.opt.undofile = true
 
 -- Disable beeping
-opt.errorbells = false
-opt.vb = false
+vim.opt.errorbells = false
+vim.opt.vb = false
 
 -- Set file format
--- opt.fileformats = 'unix'
--- opt.fileformats = 'dos'
+-- vim.opt.fileformats = 'unix'
+-- vim.opt.fileformats = 'dos'
 
 -- No swap file
-opt.swapfile = false
+vim.opt.swapfile = false
 
 -- Set terminal's title according to file name
-opt.title = true
+vim.opt.title = true
 
 -- Enable mouse in all modes.
-opt.mouse = 'a'
+vim.opt.mouse = 'a'
 
 -- UTF-8 Encoding
-opt.encoding = 'utf-8'
-opt.fileencodings = 'utf-8'
+vim.opt.encoding = 'utf-8'
+vim.opt.fileencodings = 'utf-8'
 
 -- Enable cursor line.
-opt.cursorline = true
+vim.opt.cursorline = true
 
 -- Autoread file, if the file is changed outside of vim, it will ask you if you Want to reload it
-opt.autoread = true
+vim.opt.autoread = true
 
 -- Disable default ruler (bar at the bottom)
-opt.ruler = true
+vim.opt.ruler = true
 
 -- always show status line and one status line for all splits
-opt.laststatus = 3
+vim.opt.laststatus = 3
 
 -- Setting colorcolumn.
-opt.colorcolumn = '81'
+vim.opt.colorcolumn = '81'
 
 -- Set indentation stuf.
-opt.tabstop = 4
-opt.softtabstop = 0
-opt.shiftwidth = 4
-opt.smartindent = true
-opt.expandtab = true
-opt.smarttab = true
-opt.autoindent = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 0
+vim.opt.shiftwidth = 4
+vim.opt.smartindent = true
+vim.opt.expandtab = true
+vim.opt.smarttab = true
+vim.opt.autoindent = true
 
 -- Set searching stuf.
-opt.hlsearch = true
-opt.incsearch = true
-opt.ignorecase = false
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
+vim.opt.ignorecase = false
 
 -- For opening splits on right or bottom.
-opt.splitbelow = true
-opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 
 -- Disable line wrapping
-opt.wrap = false
+vim.opt.wrap = false
 
 -- Show trailing spaces
-opt.listchars = 'tab:>>,trail:_'
-opt.list = true
+vim.opt.listchars = 'tab:>>,trail:_'
+vim.opt.list = true
 
 -- Set undolevel to max
-opt.undolevels = 9999
+vim.opt.undolevels = 9999
 
 -- Try to find open buffer before creating it
-opt.switchbuf = 'usetab'
+vim.opt.switchbuf = 'usetab'
 
 -- Options for :mksession
-opt.sessionoptions = 'buffers,curdir,tabpages,winsize'
+vim.opt.sessionoptions = 'buffers,curdir,tabpages,winsize'
 
 -- Always show tab line
-opt.showtabline = 2
+vim.opt.showtabline = 2
 
 -- Show current find and replace in a split
-opt.inccommand = 'split'
+vim.opt.inccommand = 'split'
 
 -- Disable modeline parsing
-opt.modeline = false
+vim.opt.modeline = false
 
 -- less input lags
-opt.ttimeoutlen = 100
+vim.opt.ttimeoutlen = 100
 
--- opt.path += "**"
+-- vim.opt.path += "**"
 
 -- enable rainbow brackets
 vim.api.nvim_set_var('rainbow_active', 1)

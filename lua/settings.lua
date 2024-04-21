@@ -9,6 +9,9 @@ opt.foldmethod = 'indent'
 opt.foldlevelstart = 99
 opt.foldlevel = 99
 
+-- Vim delay for updating gitgutter
+opt.updatetime = 300
+
 -- Number settings.
 opt.number = true
 opt.numberwidth = 2

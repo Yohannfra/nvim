@@ -137,9 +137,31 @@ map('n', '<C-[>', ':GitGutterPrevHunk<CR>')
 map('n', '<C-d>', '#Ncgn')
 map('v', '<C-d>', 'y/<C-r>"<CR>Ncgn')
 
--- highlight word under cursor
-map('n', 'm', ':match Error "<C-R><C-W>"<CR>')
-
+-- Toggle NvimTree
 map('n', '<C-n>', ':NvimTreeFindFileToggle<CR>')
 
+-- Git diff current file
 vim.api.nvim_create_user_command('GitDiff', 'GitGutterDiffOrig', {})
+
+-- highlight word under cursor if m is pressed
+function MyMatchWord()
+        local mode = vim.fn.mode()
+        word = ""
+
+        if (mode == "n") then
+            word = vim.fn.expand("<cword>")
+        elseif (mode == "v") then
+            word = vim.fn.expand("<cword>") -- TODO get visual selection instead
+        end
+
+    if (word == "") then
+        print(" ")
+        return
+    else
+        vim.cmd("match Error \"" .. word .. "\"")
+        print(word)
+    end
+end
+
+map('n', 'm', '<Cmd>lua MyMatchWord()<CR>')
+map('v', 'm', '<Cmd>lua MyMatchWord()<CR>')

@@ -48,6 +48,7 @@ Plug ('Yohannfra/Vim-Protect-Header', {on = 'Protect'})
 -- icons
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
+Plug ('akinsho/bufferline.nvim', {tag = '*'})
 
 -- git lens like
 Plug 'APZelos/blamer.nvim'
@@ -82,6 +83,7 @@ require('plugins/nvim_tree')
 require('plugins/incline')
 require('plugins/minisnip')
 require('plugins/nvim-colorizer')
+require('plugins/bufferline')
 require('plugins/treesitter')
 
 vim.cmd [[

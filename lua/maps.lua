@@ -14,6 +14,9 @@ map('n', '<Leader>m', ':match none <CR> :noh <CR>h')
 -- Map leader as .
 map('n', '<Leader><Leader>', '.')
 
+-- Jsx comment (temporary hack ?)
+map('n', 'gcj', '<Esc>0i{ /*<Esc>$i*/}<Esc>==')
+
 -- TODO
 function MyExtendHome2()
     local col = vim.api.nvim_win_get_cursor(0)[2]

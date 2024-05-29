@@ -15,7 +15,7 @@ map('n', '<Leader>m', ':match none <CR> :noh <CR>h')
 map('n', '<Leader><Leader>', '.')
 
 -- Jsx comment (temporary hack ?)
-map('n', 'gcj', '<Esc>0i{ /*<Esc>$i*/}<Esc>==')
+map('n', 'gcj', '<Esc>^i{ /* <Esc>A */ }<Esc>')
 
 -- TODO
 function MyExtendHome2()

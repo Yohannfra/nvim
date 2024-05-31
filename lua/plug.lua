@@ -22,9 +22,6 @@ Plug 'hrsh7th/nvim-cmp'
 -- snipets
 Plug 'joereynolds/vim-minisnip'
 
--- comments
-Plug 'tpope/vim-commentary'
-
 -- Quick edit surround
 Plug 'tpope/vim-surround'
 

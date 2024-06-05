@@ -37,6 +37,7 @@ Plug 'luochen1990/rainbow'
 
 -- git diff
 Plug 'airblade/vim-gitgutter'
+Plug 'kdheepak/lazygit.nvim'
 
 -- my plugins
 Plug 'Yohannfra/Vim-Flip'
@@ -82,6 +83,7 @@ require('plugins/minisnip')
 require('plugins/nvim-colorizer')
 require('plugins/bufferline')
 require('plugins/treesitter')
+require('plugins/lazygit')
 
 vim.cmd [[
 let g:Protect_Header_cpp_extern_c = 1

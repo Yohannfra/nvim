@@ -171,3 +171,16 @@ end
 
 map('n', 'm', '<Cmd>lua MyMatchWord()<CR>')
 map('v', 'm', '<Cmd>lua MyMatchWord()<CR>')
+
+-- Toggle quickfix
+vim.cmd [[
+function! ToggleQuickFix()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        copen
+    else
+        cclose
+    endif
+endfunction
+
+nnoremap <silent> <C-m> :call ToggleQuickFix()<cr>
+]]

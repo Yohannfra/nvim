@@ -149,6 +149,9 @@ map('n', '<C-n>', ':NvimTreeFindFileToggle<CR>')
 -- Git diff current file
 vim.api.nvim_create_user_command('GitDiff', 'GitGutterDiffOrig', {})
 
+-- Run eslint in quickfix
+vim.api.nvim_create_user_command('Eslint', "set makeprg=npx\\ eslint\\ -f\\ unix\\ --cache\\ src/ | silent make | copen", {})
+
 -- highlight word under cursor if m is pressed
 function MyMatchWord()
         local mode = vim.fn.mode()

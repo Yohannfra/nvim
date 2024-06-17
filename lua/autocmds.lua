@@ -53,6 +53,9 @@ augroup END
 -- Segger embedded studio build files
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.emProject", command='set filetype=xml'})
 
+-- mjml mail template files
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.mjml", command='set filetype=html'})
+
 -- .mm is the extension for the C++ compilation unit expected by the Objective-C (macos stuff)
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.mm", command='set filetype=cpp'})
 

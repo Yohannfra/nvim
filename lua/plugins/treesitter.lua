@@ -14,6 +14,7 @@ require('nvim-treesitter.configs').setup {
     "rust",
     "python",
     "typescript",
+    "tsx",
     "javascript",
     "json",
     "prisma",

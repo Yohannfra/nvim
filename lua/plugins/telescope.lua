@@ -2,6 +2,14 @@ local actions = require("telescope.actions")
 
 require("telescope").setup({
     defaults = {
+        layout_config = {
+            width = {
+                padding = 0
+            }
+        },
+        path_display = {
+            "truncate"
+        },
         previewer = true,
         layout_strategy = "flex",
         file_previewer = require'telescope.previewers'.vim_buffer_cat.new,

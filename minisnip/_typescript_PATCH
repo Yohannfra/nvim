@@ -1,0 +1,8 @@
+export async function PATCH(req: NextRequest): Promise<NextResponse> {
+  const body: unknown = await req.json()
+
+  logHttpCall(req, { body })
+
+  {{++}}
+  return new NextResponse('', { status: 200 })
+}

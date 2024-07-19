@@ -52,6 +52,9 @@ map('v', 'H', '0')
 -- tabs navigation
 map('n', 'gr', 'gT')
 
+-- Jump back with Ctrl-p
+map('n', '<C-p>', '<C-i>')
+
 -- To not go back one character when exiting insert mode
 map('i', '<Esc>', '<Esc>l')
 map('i', '<C-c>', '<Esc>l')

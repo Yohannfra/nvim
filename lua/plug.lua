@@ -61,9 +61,6 @@ Plug 'norcalli/nvim-colorizer.lua'
 
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 
--- Json path
-Plug 'phelipetls/jsonpath.nvim'
-
 -- telescope (this MUST be the last loaded plugin)
 -- (https://www.reddit.com/r/neovim/comments/13ybxld/treesitter_error_in_telescope_preview/)
 Plug 'nvim-lua/plenary.nvim'
@@ -86,7 +83,6 @@ require('plugins/minisnip')
 require('plugins/nvim-colorizer')
 require('plugins/bufferline')
 require('plugins/treesitter')
-require('plugins/jsonpath')
 require('plugins/lazygit')
 
 vim.cmd [[

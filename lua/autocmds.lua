@@ -73,6 +73,8 @@ vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.test", com
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.local", command='set filetype=sh'})
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.template", command='set filetype=sh'})
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.dev", command='set filetype=sh'})
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.production", command='set filetype=sh'})
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.development", command='set filetype=sh'})
 
 -- Indent settings for Makefile / go
 vim.cmd [[

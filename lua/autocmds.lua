@@ -68,13 +68,8 @@ vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="pymakr.conf", c
 --- the config file in ESP_IDF
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="sdkconfig.defaults", command='set filetype=conf'})
 
--- for commons .env files
-vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.test", command='set filetype=sh'})
-vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.local", command='set filetype=sh'})
-vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.template", command='set filetype=sh'})
-vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.dev", command='set filetype=sh'})
-vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.production", command='set filetype=sh'})
-vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.development", command='set filetype=sh'})
+-- for all .env files
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.*", command='set filetype=sh'})
 
 -- Indent settings for Makefile / go
 vim.cmd [[

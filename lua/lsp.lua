@@ -4,7 +4,7 @@ local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {}
 
 -- Typescript
-lspconfig.tsserver.setup {}
+lspconfig.ts_ls.setup {}
 
 -- TailwindCss
 lspconfig.tailwindcss.setup{}
@@ -118,7 +118,7 @@ require('lspconfig')['pyright'].setup {
   capabilities = capabilities
 }
 
-require('lspconfig')['tsserver'].setup {
+require('lspconfig')['ts_ls'].setup {
   capabilities = capabilities
 }
 

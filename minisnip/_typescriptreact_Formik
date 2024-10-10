@@ -14,11 +14,12 @@ const default{{+~\~1+}}Values: {{+~\~1+}}FormikValues = {
     initialValues={default{{+~\~1+}}Values}
     validationSchema={Yup.object({
 
-        }}
+        })}
     onSubmit={async (values): Promise<void> => {
         console.log(values)
     }}
-> {(): ReactElement => (
+>
+{(): ReactElement => (
 <Form>
 {{++}}
 </Form>

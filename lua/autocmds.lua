@@ -11,28 +11,6 @@ vim.api.nvim_create_autocmd('FileType', {pattern="gdscript", command='setlocal c
 -- Comment string for .Xressources
 vim.api.nvim_create_autocmd('FileType', {pattern="xdefaults", command='setlocal commentstring=!\\ %s'})
 
--- Highlight _t (for structures) in c and in cpp
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cStructure /\\w*_t\\s/'})
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cStructure /\\w*_t;/'})
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cStructure /\\w*_t)/'})
-
--- Highlight _e (for enums) in c and in cpp
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cStructure /\\w*_e\\s/'})
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cStructure /\\w*_e;/'})
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cStructure /\\w*_e)/'})
-
--- Highlight short types in c and in cpp
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cType /u8/'})
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cType /i8/'})
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cType /u16/'})
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cType /i16/'})
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cType /u32/'})
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cType /i32/'})
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cType /u64/'})
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cType /i64/'})
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cType /f32/'})
--- vim.api.nvim_create_autocmd('FileType', {pattern="c,cpp", command='syntax match cType /f64/'})
-
 -- highlight yank
 vim.api.nvim_create_autocmd('TextYankPost', {pattern="*",
         callback=function()

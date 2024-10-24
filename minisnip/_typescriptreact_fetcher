@@ -1,0 +1,9 @@
+import type { Fetcher } from 'swr'
+import useSWR from 'swr'
+
+const fetcher: Fetcher<{{+Type+}}> = (url: string) =>
+  fetch(url).then((res) => res.json())
+const { data } = useSWR<{{+~\~1+}}, Error>(
+  '/api/',
+  fetcher
+)

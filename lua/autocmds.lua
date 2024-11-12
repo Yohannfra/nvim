@@ -55,6 +55,13 @@ autocmd FileType make setlocal noexpandtab shiftwidth=8 softtabstop=0
 autocmd FileType go setlocal noexpandtab shiftwidth=4 softtabstop=0
 ]]
 
+-- Set tsc for :make for typescript files
+vim.cmd [[
+augroup tsc\_comp
+    autocmd FileType typescript,typescriptreact compiler tsc | setlocal makeprg=npx\ tsc\ --noEmit\ --pretty\ false
+augroup END
+]]
+
 -- vim.cmd [[
 -- autocmd FileType c,cpp ClangFormatAutoEnable
 -- ]]

@@ -11,6 +11,9 @@ set number
 " enable syntax highlighting
 syntax enable
 
+" use system clipboard
+set clipboard+=unnamedplus
+
 " Navigation
 nnoremap L $
 vnoremap L $

@@ -1,4 +1,5 @@
-" Use this instead of vim -u NONE for opening large files
+" Minimal vim/neovim config
+
 " USAGE:
 " $ vim -u minivimrc.vim
 "

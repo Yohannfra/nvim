@@ -65,6 +65,7 @@ map('i', 'jk', '<Esc>l')
 map('n','ff', ':Telescope find_files<CR>')
 map('n', 'fg', ':Telescope live_grep<CR>')
 map('n', 'fb', ':Telescope buffers<CR>')
+map('n', 'fr', ':Telescope resume<CR>')
 
 -- find and replace
 map('n', '<C-g>', ':%s/')

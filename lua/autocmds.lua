@@ -34,6 +34,9 @@ vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.emProject", c
 -- mjml mail template files
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.mjml", command='set filetype=html'})
 
+-- bruno http client files
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.bru", command='set filetype=toml'})
+
 -- .mm is the extension for the C++ compilation unit expected by the Objective-C (macos stuff)
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.mm", command='set filetype=cpp'})
 

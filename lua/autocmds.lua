@@ -55,6 +55,7 @@ vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.*", comman
 -- Indent settings for Makefile / go
 vim.cmd [[
 autocmd FileType make setlocal noexpandtab shiftwidth=8 softtabstop=0
+autocmd FileType javascript,typescript,typescriptreact setlocal expandtab shiftwidth=2 softtabstop=0
 autocmd FileType go setlocal noexpandtab shiftwidth=4 softtabstop=0
 ]]
 

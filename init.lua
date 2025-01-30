@@ -8,6 +8,8 @@ require('theme')
 
 require('autocmds')
 
+require('commands')
+
 require('lsp')
 
 if vim.g.neovide then

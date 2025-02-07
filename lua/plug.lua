@@ -53,7 +53,11 @@ Plug 'APZelos/blamer.nvim'
 
 -- the small floating window in the top right with the file name
 
+-- Prisma
 Plug 'prisma/vim-prisma'
+
+-- Handlebars (html template)
+Plug 'mustache/vim-mustache-handlebars'
 
 -- color highlighter
 Plug 'norcalli/nvim-colorizer.lua'

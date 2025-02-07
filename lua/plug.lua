@@ -52,7 +52,6 @@ Plug ('akinsho/bufferline.nvim', {tag = '*'})
 Plug 'APZelos/blamer.nvim'
 
 -- the small floating window in the top right with the file name
-Plug 'b0o/incline.nvim'
 
 Plug 'prisma/vim-prisma'
 
@@ -78,7 +77,6 @@ vim.call('plug#end')
 require('plugins/telescope')
 require('plugins/doxygen_toolkit')
 require('plugins/nvim_tree')
-require('plugins/incline')
 require('plugins/minisnip')
 require('plugins/nvim-colorizer')
 require('plugins/bufferline')

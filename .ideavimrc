@@ -47,11 +47,8 @@ nnoremap " :
 nnoremap J j
 vnoremap J j
 
-" abbrev
-cabbrev tn tabnew
-
 "---------- IDE actions ----------
-"
+
 " code information
 nnoremap K :action ShowHoverInfo<CR>
 nnoremap E :action ShowErrorDescription<CR>

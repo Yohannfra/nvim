@@ -1,0 +1,74 @@
+" .ideavimrc is a configuration file for IdeaVim plugin.
+" It uses the same commands as the original .vimrc configuration.
+"
+" You can find a list of commands here: https://jb.gg/h38q75
+"
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" base configuration
+set showmode
+syntax enable
+set hlsearch
+set incsearch
+set number
+set clipboard+=unnamed
+
+" the leader key
+let mapleader=" "
+
+" use system clipboard
+set clipboard+=unnamedplus
+
+" remove hlsearch
+nnoremap <Leader>m :noh<CR>
+
+" Navigation
+nnoremap L $
+vnoremap L $
+
+nnoremap H 0
+vnoremap H 0
+
+nnoremap <C-l> <C-W>l
+nnoremap <C-h> <C-W>h
+
+nnoremap <C-p> <C-i>
+
+nnoremap gr gT
+
+" Escape with jk
+inoremap jk <Esc>l
+
+" Typos
+nnoremap ; :
+vnoremap ; :
+nnoremap " :
+
+nnoremap J j
+vnoremap J j
+
+" abbrev
+cabbrev tn tabnew
+
+"---------- IDE actions ----------
+"
+" code information
+nnoremap K :action ShowHoverInfo<CR>
+nnoremap E :action ShowErrorDescription<CR>
+
+" code navigation
+nnoremap cd :action GotoImplementation<CR>
+
+nnoremap ff :action SearchEverywhere<CR>
+
+"---------- plugins ----------
+" easy motion
+
+Plug 'preservim/nerdtree'
+map <c-n> :NERDTreeToggle<CR>
+
+Plug 'tpope/vim-surround'
+
+Plug 'tpope/vim-commentary'
+
+Plug 'machakann/vim-highlightedyank'

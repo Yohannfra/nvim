@@ -154,7 +154,7 @@ map('n', '<C-n>', ':NvimTreeFindFileToggle<CR>')
 vim.api.nvim_create_user_command('GitDiff', 'GitGutterDiffOrig', {})
 
 -- Run eslint in quickfix
-vim.api.nvim_create_user_command('Eslint', "set makeprg=npx\\ eslint\\ -f\\ unix\\ --cache\\ src/ | silent make | copen", {})
+vim.api.nvim_create_user_command('Eslint', "set makeprg=npx\\ eslint\\ -f\\ unix\\ src/\\ --max-warnings=0 | silent make | copen", {})
 
 -- highlight word under cursor if m is pressed
 function MyMatchWord()

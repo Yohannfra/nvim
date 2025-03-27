@@ -59,6 +59,9 @@ Plug 'prisma/vim-prisma'
 -- Handlebars (html template)
 Plug 'mustache/vim-mustache-handlebars'
 
+-- Wiki
+Plug 'vimwiki/vimwiki'
+
 -- color highlighter
 Plug 'norcalli/nvim-colorizer.lua'
 
@@ -86,6 +89,7 @@ require('plugins/nvim-colorizer')
 require('plugins/bufferline')
 require('plugins/treesitter')
 require('plugins/lazygit')
+require('plugins/vimwiki')
 
 vim.cmd [[
 let g:Protect_Header_cpp_extern_c = 1

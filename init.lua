@@ -8,6 +8,8 @@ require('theme')
 
 require('autocmds')
 
+require('macros')
+
 require('commands')
 
 -- nvim --cmd 'let g:nolsp = 1'

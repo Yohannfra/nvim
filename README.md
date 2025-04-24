@@ -15,13 +15,13 @@
 $ npm install -g @tailwindcss/language-server
 
 # typescript
-npm install -g typescript-language-server typescript
+$ npm install -g typescript-language-server typescript
 
 # python
-npm i -g pyright
+$ npm i -g pyright
 
 # rust
- rustup component add rust-analyzer
+$ rustup component add rust-analyzer
 ```
 
 ### Install spell dictionaries

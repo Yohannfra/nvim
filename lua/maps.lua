@@ -62,6 +62,9 @@ map('i', '<C-c>', '<Esc>l')
 -- escape with jk
 map('i', 'jk', '<Esc>l')
 
+-- paste with C-v in insert mode
+map('i', '<C-v>', '<Esc>pi')
+
 map('n','ff', ':Telescope find_files<CR>')
 map('n', 'fg', ':Telescope live_grep<CR>')
 map('n', 'fb', ':Telescope buffers<CR>')

@@ -50,7 +50,7 @@ map('n', '0', ':call ExtendedHome()<CR>')
 map('v', 'H', '0')
 
 -- tabs navigation
-map('n', 'gr', 'gT')
+map('n', 'gr', 'gT', { nowait = true })
 
 -- Jump back with Ctrl-p
 map('n', '<C-p>', '<C-i>')

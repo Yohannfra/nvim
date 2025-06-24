@@ -56,6 +56,9 @@ Plug 'APZelos/blamer.nvim'
 -- Prisma
 Plug 'prisma/vim-prisma'
 
+-- Terraform
+Plug ('hashivim/vim-terraform', { ['for'] = {'terraform'} })
+
 -- Handlebars (html template)
 Plug 'mustache/vim-mustache-handlebars'
 

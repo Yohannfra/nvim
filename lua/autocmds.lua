@@ -13,10 +13,10 @@ vim.api.nvim_create_autocmd('FileType', {pattern="xdefaults", command='setlocal 
 
 -- highlight yank
 vim.api.nvim_create_autocmd('TextYankPost', {pattern="*",
-        callback=function()
-            vim.highlight.on_yank({timeout=200})
-        end
-    })
+    callback=function()
+        vim.highlight.on_yank({timeout=200})
+    end
+})
 
 -- Return to last edit position when opening files
 vim.cmd [[

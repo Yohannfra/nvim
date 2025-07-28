@@ -161,14 +161,14 @@ vim.api.nvim_create_user_command('Eslint', "set makeprg=npx\\ eslint\\ -f\\ unix
 
 -- highlight word under cursor if m is pressed
 function MyMatchWord()
-        local mode = vim.fn.mode()
-        word = ""
+    local mode = vim.fn.mode()
+    word = ""
 
-        if (mode == "n") then
-            word = vim.fn.expand("<cword>")
-        elseif (mode == "v") then
-            word = vim.fn.expand("<cword>") -- TODO get visual selection instead
-        end
+    if (mode == "n") then
+        word = vim.fn.expand("<cword>")
+    elseif (mode == "v") then
+        word = vim.fn.expand("<cword>") -- TODO get visual selection instead
+    end
 
     if (word == "") then
         print(" ")

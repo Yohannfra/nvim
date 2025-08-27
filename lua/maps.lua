@@ -20,6 +20,9 @@ map('n', 'gcj', '<Esc>^i{ /* <Esc>A */ }<Esc>')
 -- Open lazygit
 map('n', '<Leader>g', ':LazyGit<CR>')
 
+-- Run lsp format (the :Format is defined in ./lsp.lua)
+map('n', '<Leader>p', ':Format<CR>')
+
 -- TODO
 function MyExtendHome2()
     local col = vim.api.nvim_win_get_cursor(0)[2]

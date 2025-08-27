@@ -9,6 +9,9 @@ lspconfig.ts_ls.setup {}
 -- TailwindCss
 lspconfig.tailwindcss.setup{}
 
+-- Biome
+lspconfig.biome.setup {}
+
 -- C/C++
 lspconfig.clangd.setup {}
 
@@ -123,6 +126,10 @@ require('lspconfig')['ts_ls'].setup {
 }
 
 require('lspconfig')['tailwindcss'].setup {
+  capabilities = capabilities
+}
+
+require('lspconfig')['biome'].setup {
   capabilities = capabilities
 }
 

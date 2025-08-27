@@ -56,6 +56,9 @@ Plug 'APZelos/blamer.nvim'
 -- Prisma
 Plug 'prisma/vim-prisma'
 
+-- D2 (diagrams)
+Plug 'terrastruct/d2-vim'
+
 -- Terraform
 Plug ('hashivim/vim-terraform', { ['for'] = {'terraform'} })
 

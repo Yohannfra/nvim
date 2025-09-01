@@ -14,6 +14,9 @@
 # tailwind
 $ npm install -g @tailwindcss/language-server
 
+# biome
+ $ npm install -g @biomejs/biome
+
 # typescript
 $ npm install -g typescript-language-server typescript
 

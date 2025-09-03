@@ -20,7 +20,7 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 
 -- snipets
-Plug 'joereynolds/vim-minisnip'
+Plug ('L3MON4D3/LuaSnip', {tag = 'v2.*', ['do'] = 'make install_jsregexp' })
 
 -- Quick edit surround
 Plug 'tpope/vim-surround'
@@ -84,7 +84,7 @@ vim.call('plug#end')
 require('plugins/telescope')
 require('plugins/doxygen_toolkit')
 require('plugins/nvim_tree')
-require('plugins/minisnip')
+require('plugins/luasnip')
 require('plugins/nvim-colorizer')
 require('plugins/bufferline')
 require('plugins/treesitter')

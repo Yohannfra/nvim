@@ -1,5 +1,0 @@
-export async function DELETE(req: NextRequest): Promise<NextResponse> {
-  logHttpCall(req)
-  {{++}}
-  return new NextResponse('', { status: 200 })
-}

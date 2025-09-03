@@ -1,0 +1,23 @@
+extends html
+
+snippet %
+    <% ${1} %>
+
+snippet %=
+    <%= ${1} %>
+
+snippet cc
+    <%# ${1} %>
+
+snippet if
+    <% if ${1} %>
+
+snippet else
+    <% else %>
+
+snippet end
+    <% end %>
+
+snippet map
+    <% @${1} do |item| %>
+    <% end %>

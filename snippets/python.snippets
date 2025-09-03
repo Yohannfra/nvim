@@ -1,0 +1,38 @@
+snippet #
+    #!/usr/bin/env python3
+
+    ${1}
+
+snippet class
+    class ${1}:
+        def __init__(self):
+            pass
+
+snippet false
+    False${1}
+
+snippet true
+    True${1}
+
+snippet fori
+    for i in range(${1}):
+        ${2}
+
+snippet main
+    import sys
+
+    def main(argc, argv):
+        pass${1}
+
+    if __name__ == '__main__':
+        main(len(sys.argv), sys.argv)
+
+snippet ifmain
+    if __name__ == '__main__':
+        ${1}
+
+snippet pr
+    print(${1})
+
+snippet s
+    self.${1}

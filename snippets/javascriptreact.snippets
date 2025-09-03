@@ -1,0 +1,19 @@
+extends javascript
+extends html
+
+snippet button
+    <button type="button" onClick={(): void => {}}>${1}</button>
+
+snippet cc
+    { /* ${1} */ }
+
+snippet cl
+    className="${1}"
+
+snippet img
+    <img src={${1}} alt="" />
+
+snippet useEffect
+    useEffect(() => {
+        ${1}
+    }, [])

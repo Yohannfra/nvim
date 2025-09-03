@@ -1,5 +1,0 @@
-export async function GET(req: NextRequest): Promise<NextResponse> {
-  logHttpCall(req)
-  {{++}}
-  return new NextResponse('', { status: 200 })
-}

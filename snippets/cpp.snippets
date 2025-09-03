@@ -1,0 +1,60 @@
+extends c
+
+snippet ios
+    #include <iostream>
+
+snippet iostream
+    #include <iostream>
+
+snippet iss
+    #include <string>
+
+snippet incall
+    #include <iostream>
+    #include <string>
+    #include <memory>
+    #include <vector>
+    #include <map>
+    #include <optional>
+    #include <algorithm>
+    ${0}
+
+snippet cerr
+    std::cerr << "${1}" << std::endl;
+
+snippet cout
+    std::cout << "${1}" << std::endl;
+
+snippet coutxy
+    std::cout << "x : " << x << " y : " << y << std::endl;
+
+snippet class
+    class ${1:name} {
+        public:
+            ${1:name}();
+            ~${1:name}();
+
+        private:
+    };
+
+
+snippet ESP_LOG
+    ESP_LOGI(TAG, "${1}");
+
+snippet mss
+    std::map<std::string, std::string> ${1}
+
+snippet vss
+    std::vector<std::string> ${1}
+
+snippet ss
+    std::string${1}
+
+snippet string
+    std::string${1}
+
+snippet ssc
+    const std::string &${1}
+
+snippet unptr
+    std::unique_ptr<${1}> ${2};

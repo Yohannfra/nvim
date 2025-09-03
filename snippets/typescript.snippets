@@ -1,0 +1,42 @@
+extends javascript
+
+snippet route
+    import { type NextRequest, NextResponse } from 'next/server'
+    import logger from '@/lib/logger'
+    import { logHttpCall } from '@/lib/log_http_call'
+
+    const TAG = '${1}'
+
+snippet DELETE
+    export async function DELETE(req: NextRequest): Promise<NextResponse> {
+      logHttpCall(req)
+      ${1}
+      return new NextResponse('', { status: 200 })
+    }
+
+snippet GET
+    export async function GET(req: NextRequest): Promise<NextResponse> {
+      logHttpCall(req)
+      ${1}
+      return new NextResponse('', { status: 200 })
+    }
+
+snippet PATCH
+    export async function PATCH(req: NextRequest): Promise<NextResponse> {
+      const body: unknown = await req.json()
+
+      logHttpCall(req, { body })
+
+      ${1}
+      return new NextResponse('', { status: 200 })
+    }
+
+snippet POST
+    export async function POST(req: NextRequest): Promise<NextResponse> {
+      const body: unknown = await req.json()
+
+      logHttpCall(req, { body })
+
+      ${1}
+      return new NextResponse('', { status: 200 })
+    }

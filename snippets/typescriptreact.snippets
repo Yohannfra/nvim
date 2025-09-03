@@ -1,0 +1,68 @@
+extends html
+
+extends javascript
+extends javascriptreact
+
+snippet fetcher
+    import type { Fetcher } from 'swr'
+    import useSWR from 'swr'
+
+    const fetcher: Fetcher<${1:type}> = (url: string) =>
+      fetch(url).then((res) => res.json())
+    const { data } = useSWR<${1:type}, Error>(
+      '/api/',
+      fetcher
+    )
+
+snippet formik
+    import { Form, Formik } from 'formik'
+    import type { FormikProps } from 'formik'
+
+    import * as Yup from 'yup'
+
+    interface ${1:name}FormikValues {
+    }
+
+    const default${1:name}Values: ${1:name}FormikValues = {
+
+    }
+
+    <Formik
+        initialValues={default${1:name}Values}
+        validationSchema={Yup.object({
+
+            })}
+        onSubmit={async (values): Promise<void> => {
+            console.log(values)
+        }}
+    >
+    {(): ReactElement => (
+    <Form>
+        ${2}
+    </Form>
+    )}
+    </Formik>
+
+snippet rcs
+    import React, { type ReactElement } from 'react'
+
+    export default async function ${1}(): Promise<ReactElement> {
+        return (
+            <div>
+                Hello
+            </div>
+        )
+    }
+
+snippet rcc
+    'use client'
+
+    import React, { type ReactElement } from 'react'
+
+    export default function ${1}(): ReactElement {
+        return (
+            <div>
+                Hello
+            </div>
+        )
+    }

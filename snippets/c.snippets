@@ -1,0 +1,93 @@
+snippet #i
+    #include ${0}
+
+snippet stdio
+    #include <stdio.h>
+
+snippet unistd
+    #include <unistd.h>
+
+snippet incm
+    #include "${0}"
+
+snippet incs
+    #include <${0}>
+
+snippet incall
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <unistd.h>
+    #include <stdbool.h>
+    #include <stdint.h>
+    #include <string.h>
+    ${0}
+
+snippet main
+    int main(int argc, char **argv)
+    {
+        ${0}
+        return 0;
+    }
+
+snippet struct "C struct" b
+    typedef struct ${1:name} {
+        ${0}
+    } ${1:name}_t;
+
+snippet tag
+    static const char *TAG = "${1}";
+
+snippet pf
+    printf("${0}")
+
+snippet printf
+    printf("${0}")
+
+snippet pfc
+    printf("%c\n", ${0});
+
+snippet pfd
+    printf("%d\n", ${0});
+
+snippet pfs
+    printf("%s\n", ${0});
+
+snippet pflu
+    printf("LUUU\n");
+
+snippet if
+    if (${0}) {
+        ${1}
+    }
+
+snippet while
+    while (${0}) {
+        ${1}
+    }
+
+snippet for
+    for (${1:INIT}; ${2:CONDITION}; ${3:INC}) {
+        ${4}
+    }
+
+snippet fori
+    for (int i = 0; ${1:CONDITION}; i++) {
+        ${2}
+    }
+
+snippet forj
+    for (int j = 0; ${1:CONDITION}; j++) {
+        ${2}
+    }
+
+snippet ret
+    return ${1};
+
+snippet u8
+    uint8_t${1}
+
+snippet u16
+    uint16_t${1}
+
+snippet u32
+    uint32_t${1}

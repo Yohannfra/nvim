@@ -1,0 +1,20 @@
+snippet exit
+    std::process::exit(${1});
+
+snippet pr
+    println!("{${1}}");
+
+snippet pra
+    println!("{:?}", ${1});
+
+snippet test
+    #[cfg(test)]
+    mod tests {
+        use super::*;
+
+        #[test]
+        fn it_works() {
+            let result = add(2, 2);
+            assert_eq!(result, 4);
+        }
+    }

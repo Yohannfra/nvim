@@ -62,6 +62,9 @@ Plug 'terrastruct/d2-vim'
 -- Terraform
 Plug ('hashivim/vim-terraform', { ['for'] = {'terraform'} })
 
+-- Grafana alloy config files
+Plug 'grafana/vim-alloy'
+
 -- Handlebars (html template)
 Plug 'mustache/vim-mustache-handlebars'
 

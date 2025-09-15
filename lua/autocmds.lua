@@ -59,6 +59,11 @@ autocmd FileType javascript,typescript,typescriptreact setlocal expandtab shiftw
 autocmd FileType go setlocal noexpandtab shiftwidth=4 softtabstop=0
 ]]
 
+-- Comment string for grafana alloy config files
+vim.cmd [[
+autocmd FileType alloy setlocal commentstring=//\ %s
+]]
+
 -- Set tsc for :make for typescript files
 vim.cmd [[
 augroup tsc\_comp

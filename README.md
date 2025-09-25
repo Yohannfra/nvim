@@ -25,6 +25,9 @@ $ npm i -g pyright
 
 # rust
 $ rustup component add rust-analyzer
+
+# go
+$ go install golang.org/x/tools/gopls@latest
 ```
 
 ### Install spell dictionaries

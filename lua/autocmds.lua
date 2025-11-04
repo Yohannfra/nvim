@@ -52,6 +52,14 @@ vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="sdkconfig.defau
 -- for all .env files
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.*", command='set filetype=sh'})
 
+-- set jsonc for known jsonc files
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = { ".oxlintrc.json", "biome.json", "tsconfig.json" },
+  command = "set filetype=jsonc",
+})
+
+
+
 -- Indent settings for Makefile / go
 vim.cmd [[
 autocmd FileType make setlocal noexpandtab shiftwidth=8 softtabstop=0

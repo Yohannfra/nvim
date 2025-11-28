@@ -8,6 +8,14 @@
 
 [Jetbrains Mono Nerdfont](https://www.nerdfonts.com/font-downloads)
 
+### Install inotify-tools (Linux only):
+
+See related issue: https://github.com/neovim/neovim/pull/27347
+
+```bash
+$ sudo apt install inotify-tools
+```
+
 ### Install lsps
 
 ```bash

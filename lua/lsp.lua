@@ -1,31 +1,3 @@
-local lspconfig = require('lspconfig')
-
--- Python
-lspconfig.pyright.setup {}
-
--- Typescript
-lspconfig.ts_ls.setup {}
-
--- TailwindCss
-lspconfig.tailwindcss.setup{}
-
--- Biome
-lspconfig.biome.setup {}
-
--- C/C++
-lspconfig.clangd.setup {}
-
--- Rust
-lspconfig.rust_analyzer.setup {
-  -- Server-specific settings. See `:help lspconfig-setup`
-  settings = {
-    ['rust-analyzer'] = {},
-  },
-}
-
--- Go
-lspconfig.gopls.setup {}
-
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
     callback = function(ev)
@@ -120,30 +92,53 @@ cmp.setup.cmdline(':', {
 
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-require('lspconfig')['pyright'].setup {
-  capabilities = capabilities
-}
 
-require('lspconfig')['ts_ls'].setup {
-  capabilities = capabilities
-}
+vim.lsp.config('pyright', {
+  capabilities = capabilities,
+})
 
-require('lspconfig')['tailwindcss'].setup {
-  capabilities = capabilities
-}
+vim.lsp.config('ts_ls', {
+  capabilities = capabilities,
+})
 
-require('lspconfig')['biome'].setup {
-  capabilities = capabilities
-}
+vim.lsp.config('tailwindcss', {
+    capabilities = capabilities,
+    settings = {
+        tailwindCSS = {
+            classAttributes = { "class", "className", ".*_class" },
 
-require('lspconfig')['clangd'].setup {
-  capabilities = capabilities
-}
+            classRegex = {
+                { "cn\\(([^)]*)\\)",     "[\"'`]([^\"'`]*?)[\"'`]" },
+                { "clsx\\(([^)]*)\\)",   "[\"'`]([^\"'`]*?)[\"'`]" },
+                { "cva\\(([^)]*)\\)",    "[\"'`]([^\"'`]*?)[\"'`]" },
+            },
+            classFunctions = { "cn", "clsx", "cva" },
+        }
+    }
+})
 
-require('lspconfig')['rust_analyzer'].setup {
-  capabilities = capabilities
-}
+vim.lsp.config('biome', {
+  capabilities = capabilities,
+})
 
-require('lspconfig')['gopls'].setup {
-  capabilities = capabilities
-}
+vim.lsp.config('clangd', {
+  capabilities = capabilities,
+})
+
+vim.lsp.config('rust_analyzer', {
+  capabilities = capabilities,
+})
+
+vim.lsp.config('gopls', {
+  capabilities = capabilities,
+})
+
+vim.lsp.enable({
+  'pyright',
+  'ts_ls',
+  'tailwindcss',
+  'biome',
+  'clangd',
+  'rust_analyzer',
+  'gopls'
+})

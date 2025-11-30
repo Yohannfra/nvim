@@ -19,6 +19,13 @@ require('nvim-tree').setup {
   hijack_cursor       = true,
   update_cwd          = false,
   on_attach = my_on_attach,
+
+  actions = {
+    open_file = {
+      resize_window = false,
+    },
+  },
+
   diagnostics = {
     enable = false,
     icons = {

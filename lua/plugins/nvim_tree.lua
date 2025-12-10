@@ -54,7 +54,7 @@ require('nvim-tree').setup {
     timeout = 500,
   },
   view = {
-    width = 45,
+    width = 65,
     side = 'left',
     number = false,
     relativenumber = false,

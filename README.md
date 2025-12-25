@@ -36,6 +36,9 @@ $ rustup component add rust-analyzer
 
 # go
 $ go install golang.org/x/tools/gopls@latest
+
+# ruby
+$ gem install ruby-lsp
 ```
 
 ### Install spell dictionaries

@@ -133,6 +133,10 @@ vim.lsp.config('gopls', {
   capabilities = capabilities,
 })
 
+vim.lsp.config('ruby_lsp', {
+  capabilities = capabilities,
+})
+
 vim.lsp.enable({
   'pyright',
   'ts_ls',
@@ -140,5 +144,6 @@ vim.lsp.enable({
   'biome',
   'clangd',
   'rust_analyzer',
+  'ruby_lsp',
   'gopls'
 })

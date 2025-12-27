@@ -24,3 +24,28 @@ snippet map
 
 snippet debug
     <%= debug @${1} %>
+
+snippet foreach
+    <div id="${1}s">
+      <% @${1}s.each do |${1}| %>
+        <div>
+          <%= ${1}.name %>
+        </div>
+      <% end %>
+    </div>
+
+snippet form
+    <%= form_with model: @${1} do |form| %>
+      <div>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+
+      <div>
+        <%= form.submit %>
+      </div>
+    <% end %>
+
+snippet cache
+    <% cache @${1} do %>
+    <% end %>

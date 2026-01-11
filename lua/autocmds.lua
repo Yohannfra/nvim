@@ -52,6 +52,9 @@ vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="sdkconfig.defau
 -- for all .env files
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.*", command='set filetype=sh'})
 
+-- for git hooks files
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="pre-commit", command='set filetype=sh'})
+
 -- set jsonc for known jsonc files
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   pattern = { ".oxlintrc.json", "biome.json", "tsconfig.json" },

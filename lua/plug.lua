@@ -43,6 +43,9 @@ Plug 'kdheepak/lazygit.nvim'
 Plug 'Yohannfra/Vim-Flip'
 Plug ('Yohannfra/Vim-Protect-Header', {on = 'Protect'})
 
+-- Edge.js
+Plug 'Yohannfra/edge.vim'
+
 -- icons
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'

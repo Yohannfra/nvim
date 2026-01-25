@@ -19,6 +19,11 @@ $ sudo apt install inotify-tools
 ### Install lsps
 
 ```bash
+# tree-sitter
+$ npm install -g tree-sitter-cli
+# or with cargo
+$ cargo install --locked tree-sitter-cli
+
 # tailwind
 $ npm install -g @tailwindcss/language-server
 

@@ -1,34 +1,34 @@
-require('nvim-treesitter.configs').setup {
-  ensure_installed = {
-    "c",
-    "cmake",
-    "cpp",
-    "css",
-    "bash",
-    -- "dockerfile",
-    "html",
-    "make",
-    "markdown",
-    "lua",
-    "vim",
-    "query",
-    "rust",
-    "python",
-    "typescript",
-    "tsx",
-    "javascript",
-    "json",
-    "prisma",
-    "toml",
-    "vimdoc",
-  },
-
-  highlight = {
-    enable = true,
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
+require'nvim-treesitter'.setup {
+    -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
+    install_dir = vim.fn.stdpath('data') .. '/site'
 }
+
+local languages = {
+    "c", "cmake", "cpp", "css", "bash", "dockerfile",
+    "html", "make", "markdown", "lua", "vim", "query",
+    "rust", "python", "typescript", "tsx", "javascript",
+    "json", "prisma", "toml", "vimdoc",
+}
+
+require'nvim-treesitter'.install(languages)
+
+vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = languages,
+    callback = function() vim.treesitter.start() end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = languages,
+    callback = function()
+        vim.treesitter.start()
+
+        -- folding
+        vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+        vim.wo[0][0].foldmethod = 'expr'
+
+        -- indentation
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+})

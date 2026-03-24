@@ -2,9 +2,11 @@
 vim.opt.shell = '/bin/zsh'
 
 -- Fold method
-vim.opt.foldmethod = 'indent'
 vim.opt.foldlevelstart = 99
 vim.opt.foldlevel = 99
+
+vim.o.foldmethod = "expr" -- was 'indent' before
+vim.o.foldexpr = "v:lua.vim.lsp.foldexpr()"
 
 -- Vim delay for updating gitgutter
 vim.opt.updatetime = 300

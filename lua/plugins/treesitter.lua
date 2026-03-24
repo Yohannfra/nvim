@@ -1,34 +1,37 @@
-require('nvim-treesitter.configs').setup {
-  ensure_installed = {
-    "c",
-    "cmake",
-    "cpp",
-    "css",
-    "bash",
-    -- "dockerfile",
-    "html",
-    "make",
-    "markdown",
-    "lua",
-    "vim",
-    "query",
-    "rust",
-    "python",
-    "typescript",
-    "tsx",
-    "javascript",
-    "json",
-    "prisma",
-    "toml",
-    "vimdoc",
-  },
-
-  highlight = {
-    enable = true,
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
+local ts_filetypes = {
+        "c",
+        "cmake",
+        "cpp",
+        "css",
+        "bash",
+        "html",
+        "make",
+        "markdown",
+        "lua",
+        "vim",
+        "query",
+        "rust",
+        "python",
+        "typescript",
+        "tsx",
+        "javascript",
+        "jsx",
+        "json",
+        "prisma",
+        "toml",
+        "vimdoc",
 }
+
+require'nvim-treesitter'.setup ({})
+
+require'nvim-treesitter'.install(ts_filetypes):wait(300000)
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = ts_filetypes,
+  callback = function()
+      vim.treesitter.start()
+
+      vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+      vim.wo[0][0].foldmethod = 'expr'
+  end,
+})

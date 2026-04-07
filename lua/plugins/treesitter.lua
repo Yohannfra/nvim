@@ -1,37 +1,34 @@
-local ts_filetypes = {
-        "c",
-        "cmake",
-        "cpp",
-        "css",
-        "bash",
-        "html",
-        "make",
-        "markdown",
-        "lua",
-        "vim",
-        "query",
-        "rust",
-        "python",
-        "typescript",
-        "tsx",
-        "javascript",
-        "jsx",
-        "json",
-        "prisma",
-        "toml",
-        "vimdoc",
+require'nvim-treesitter'.setup {
+    -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
+    install_dir = vim.fn.stdpath('data') .. '/site'
 }
 
-require'nvim-treesitter'.setup ({})
+local languages = {
+    "c", "cmake", "cpp", "css", "bash", "dockerfile",
+    "html", "make", "markdown", "lua", "vim", "query",
+    "rust", "python", "typescript", "tsx", "javascript",
+    "json", "prisma", "toml", "vimdoc",
+}
 
-require'nvim-treesitter'.install(ts_filetypes):wait(300000)
+require'nvim-treesitter'.install(languages)
+
+vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = ts_filetypes,
-  callback = function()
-      vim.treesitter.start()
+    pattern = languages,
+    callback = function() vim.treesitter.start() end,
+})
 
-      vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-      vim.wo[0][0].foldmethod = 'expr'
-  end,
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = languages,
+    callback = function()
+        vim.treesitter.start()
+
+        -- folding
+        vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+        vim.wo[0][0].foldmethod = 'expr'
+
+        -- indentation
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
 })

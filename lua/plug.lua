@@ -1,29 +1,62 @@
+vim.pack.add({
+    -- theme
+    'https://github.com/ellisonleao/gruvbox.nvim',
+
+    -- Autoclose brackets parenthesis
+    'https://github.com/jiangmiao/auto-pairs',
+
+    -- Quick text alignment
+    'https://github.com/godlygeek/tabular',
+
+    -- lsp
+    'https://github.com/neovim/nvim-lspconfig',
+    'https://github.com/hrsh7th/cmp-nvim-lsp',
+    'https://github.com/hrsh7th/cmp-buffer',
+    'https://github.com/hrsh7th/cmp-path',
+    'https://github.com/hrsh7th/cmp-cmdline',
+    'https://github.com/hrsh7th/nvim-cmp',
+
+    -- Quick edit surround
+    'https://github.com/tpope/vim-surround',
+
+    -- rainbow brackets/parenthesis
+    'https://github.com/luochen1990/rainbow',
+
+    -- git diff
+    'https://github.com/airblade/vim-gitgutter',
+    'https://github.com/kdheepak/lazygit.nvim',
+
+    -- Edge.js
+    'https://github.com/Yohannfra/edge.vim',
+
+    -- git lens like
+    'https://github.com/APZelos/blamer.nvim',
+
+    -- Prisma
+    'https://github.com/prisma/vim-prisma',
+
+    -- D2 (diagrams)
+    'https://github.com/terrastruct/d2-vim',
+
+    -- Grafana alloy config files
+    'https://github.com/grafana/vim-alloy',
+
+    -- Handlebars (html template)
+    'https://github.com/mustache/vim-mustache-handlebars',
+
+    -- Wiki
+    'https://github.com/vimwiki/vimwiki',
+
+    -- color highlighter
+    'https://github.com/norcalli/nvim-colorizer.lua',
+})
+
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
--- theme
-Plug 'ellisonleao/gruvbox.nvim'
-
--- Autoclose brackets parenthesis
-Plug 'jiangmiao/auto-pairs'
-
--- Quick text alignment
-Plug 'godlygeek/tabular'
-
--- lsp
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
-
 -- snipets
 Plug ('L3MON4D3/LuaSnip', {tag = 'v2.*', ['do'] = 'make install_jsregexp' })
-
--- Quick edit surround
-Plug 'tpope/vim-surround'
 
 -- python
 Plug ('tell-k/vim-autopep8', { on = 'Autopep8' })
@@ -32,59 +65,27 @@ Plug ('tell-k/vim-autopep8', { on = 'Autopep8' })
 Plug ('rhysd/vim-clang-format', {['for'] = {'c', 'cpp'}})
 Plug ('Yohannfra/DoxygenToolkit.vim', {['for'] = {'c', 'cpp'}})
 
--- rainbow brackets/parenthesis
-Plug 'luochen1990/rainbow'
-
--- git diff
-Plug 'airblade/vim-gitgutter'
-Plug 'kdheepak/lazygit.nvim'
-
 -- my plugins
-Plug 'Yohannfra/Vim-Flip'
 Plug ('Yohannfra/Vim-Protect-Header', {on = 'Protect'})
-
--- Edge.js
-Plug 'Yohannfra/edge.vim'
 
 -- icons
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug ('akinsho/bufferline.nvim', {tag = '*'})
 
--- git lens like
-Plug 'APZelos/blamer.nvim'
-
--- the small floating window in the top right with the file name
-
--- Prisma
-Plug 'prisma/vim-prisma'
-
--- D2 (diagrams)
-Plug 'terrastruct/d2-vim'
-
 -- Terraform
 Plug ('hashivim/vim-terraform', { ['for'] = {'terraform'} })
 
--- Grafana alloy config files
-Plug 'grafana/vim-alloy'
-
--- Handlebars (html template)
-Plug 'mustache/vim-mustache-handlebars'
-
--- Wiki
-Plug 'vimwiki/vimwiki'
-
--- color highlighter
-Plug 'norcalli/nvim-colorizer.lua'
-
-Plug('nvim-treesitter/nvim-treesitter')
-
--- telescope (this MUST be the last loaded plugin)
--- (https://www.reddit.com/r/neovim/comments/13ybxld/treesitter_error_in_telescope_preview/)
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-
 vim.call('plug#end')
+
+vim.pack.add({
+    'https://github.com/nvim-treesitter/nvim-treesitter',
+
+    -- telescope (this MUST be the last loaded plugin)
+    -- (https://www.reddit.com/r/neovim/comments/13ybxld/treesitter_error_in_telescope_preview/)
+    'https://github.com/nvim-lua/plenary.nvim',
+    'https://github.com/nvim-telescope/telescope.nvim',
+})
 
 -- configure plugins
 require('plugins/telescope')

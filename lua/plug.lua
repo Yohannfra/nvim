@@ -1,3 +1,7 @@
+-- Built-in plugins (Neovim 0.12+)
+vim.cmd('packadd nvim.undotree')
+vim.cmd('packadd nvim.difftool')
+
 vim.pack.add({
     -- theme
     'https://github.com/ellisonleao/gruvbox.nvim',

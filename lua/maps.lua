@@ -36,20 +36,18 @@ function MyExtendHome2()
 end
 
 -- Line navigation
-vim.cmd [[
-function! ExtendedHome()
-    let column = col('.')
-    normal! ^
-    if column == col('.')
-        normal! 0
-    endif
-endfunction
-]]
+function ExtendedHome()
+    local column = vim.fn.col('.')
+    vim.cmd('normal! ^')
+    if column == vim.fn.col('.') then
+        vim.cmd('normal! 0')
+    end
+end
 
 map('v', 'L', '$')
 map('n', 'L', '$')
-map('n', 'H', ':call ExtendedHome()<CR>')
-map('n', '0', ':call ExtendedHome()<CR>')
+map('n', 'H', '<Cmd>lua ExtendedHome()<CR>')
+map('n', '0', '<Cmd>lua ExtendedHome()<CR>')
 map('v', 'H', '0')
 
 -- tabs navigation

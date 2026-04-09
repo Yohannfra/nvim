@@ -53,6 +53,14 @@ vim.pack.add({
 
     -- color highlighter
     'https://github.com/norcalli/nvim-colorizer.lua',
+
+    -- nvim-tree
+    'https://github.com/kyazdani42/nvim-web-devicons',
+    'https://github.com/kyazdani42/nvim-tree.lua',
+
+    -- bufferline
+    'https://github.com/akinsho/bufferline.nvim',
+
 })
 
 local Plug = vim.fn['plug#']
@@ -71,11 +79,6 @@ Plug ('Yohannfra/DoxygenToolkit.vim', {['for'] = {'c', 'cpp'}})
 
 -- my plugins
 Plug ('Yohannfra/Vim-Protect-Header', {on = 'Protect'})
-
--- icons
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'kyazdani42/nvim-tree.lua'
-Plug ('akinsho/bufferline.nvim', {tag = '*'})
 
 -- Terraform
 Plug ('hashivim/vim-terraform', { ['for'] = {'terraform'} })

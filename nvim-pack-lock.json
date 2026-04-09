@@ -1,5 +1,18 @@
 {
   "plugins": {
+    "DoxygenToolkit.vim": {
+      "rev": "3d28a69d72171c3e63be9be78d357cae13e52d4e",
+      "src": "https://github.com/Yohannfra/DoxygenToolkit.vim"
+    },
+    "LuaSnip": {
+      "rev": "642b0c595e11608b4c18219e93b88d7637af27bc",
+      "src": "https://github.com/L3MON4D3/LuaSnip",
+      "version": "2.0.0 - 3.0.0"
+    },
+    "Vim-Protect-Header": {
+      "rev": "95e9883d5bd969bd76cc5b7aa194848c3ad650e8",
+      "src": "https://github.com/Yohannfra/Vim-Protect-Header"
+    },
     "auto-pairs": {
       "rev": "39f06b873a8449af8ff6a3eee716d3da14d63a76",
       "src": "https://github.com/jiangmiao/auto-pairs"
@@ -87,6 +100,14 @@
     "vim-alloy": {
       "rev": "0273f88f7199189f9a0f32213a34ab778e226f86",
       "src": "https://github.com/grafana/vim-alloy"
+    },
+    "vim-autopep8": {
+      "rev": "4191261db378fcad4213fc59a7f3be0c2735d543",
+      "src": "https://github.com/tell-k/vim-autopep8"
+    },
+    "vim-clang-format": {
+      "rev": "6b791825ff478061ad1c57b21bb1ed5a5fd0eb29",
+      "src": "https://github.com/rhysd/vim-clang-format"
     },
     "vim-gitgutter": {
       "rev": "21c977e8597c468c7dc76001389b0b430d46a4b0",

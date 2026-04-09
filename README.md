@@ -1,9 +1,5 @@
 # My neovim config
 
-### Plugin manager:
-
-[Vim-Plug](https://github.com/junegunn/vim-plug)
-
 ### Font:
 
 [Jetbrains Mono Nerdfont](https://www.nerdfonts.com/font-downloads)

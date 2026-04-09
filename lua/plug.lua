@@ -63,27 +63,53 @@ vim.pack.add({
 
 })
 
-local Plug = vim.fn['plug#']
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'c', 'cpp' },
+    once = true,
+    callback = function()
+        vim.pack.add({
+            'https://github.com/rhysd/vim-clang-format',
+            'https://github.com/Yohannfra/DoxygenToolkit.vim'
+        })
+    end,
+})
 
-vim.call('plug#begin', '~/.config/nvim/plugged')
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'python' },
+    once = true,
+    callback = function()
+        vim.pack.add({
+            'https://github.com/tell-k/vim-autopep8',
+        })
+    end,
+})
 
--- snipets
-Plug ('L3MON4D3/LuaSnip', {tag = 'v2.*', ['do'] = 'make install_jsregexp' })
+vim.api.nvim_create_user_command('Protect', function(opts)
+    vim.api.nvim_del_user_command('Protect')
+    vim.pack.add({
+        'https://github.com/Yohannfra/Vim-Protect-Header',
+    })
+    vim.cmd(('Protect %s'):format(opts.args))
+end, { nargs = '*' })
 
--- python
-Plug ('tell-k/vim-autopep8', { on = 'Autopep8' })
+-- snippets: build jsregexp on install/update
+vim.api.nvim_create_autocmd('PackChanged', {
+    callback = function(ev)
+        if ev.data.spec.name == 'LuaSnip' and ev.data.kind ~= 'delete' then
+            vim.system(
+                { 'make', 'install_jsregexp' },
+                { cwd = ev.data.path }
+            ):wait()
+        end
+    end,
+})
 
--- c/c++
-Plug ('rhysd/vim-clang-format', {['for'] = {'c', 'cpp'}})
-Plug ('Yohannfra/DoxygenToolkit.vim', {['for'] = {'c', 'cpp'}})
-
--- my plugins
-Plug ('Yohannfra/Vim-Protect-Header', {on = 'Protect'})
-
--- Terraform
-Plug ('hashivim/vim-terraform', { ['for'] = {'terraform'} })
-
-vim.call('plug#end')
+vim.pack.add({
+    {
+        src = 'https://github.com/L3MON4D3/LuaSnip',
+        version = vim.version.range('2'),
+    },
+})
 
 vim.pack.add({
     'https://github.com/nvim-treesitter/nvim-treesitter',
@@ -104,7 +130,4 @@ require('plugins/bufferline')
 require('plugins/treesitter')
 require('plugins/lazygit')
 require('plugins/vimwiki')
-
-vim.cmd [[
-let g:Protect_Header_cpp_extern_c = 1
-]]
+require('plugins/protect-header')

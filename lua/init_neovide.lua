@@ -18,8 +18,8 @@ map('n', '<C-b>h', ':echo "Use alt+tab to switch to terminal"<CR>')
 map('n', '<C-b>m', ':echo "Use alt+tab to switch to terminal"<CR>')
 map('n', '<C-b><Esc>', ':echo "Use alt+tab to switch to terminal"<CR>')
 
-vim.o.guifont = "monospace:h12"
+-- vim.o.guifont = "monospace:h12"
 
 vim.g.neovide_hide_mouse_when_typing = true
 vim.g.neovide_input_use_logo = 1
-vim.g.neovide_cursor_vfx_mode = "ripple"
+vim.g.neovide_cursor_vfx_mode = ""

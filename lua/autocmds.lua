@@ -52,6 +52,9 @@ vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="sdkconfig.defau
 -- for all .env files
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern=".env.*", command='set filetype=sh'})
 
+-- for mdx files
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="*.mdx", command='set filetype=markdown'})
+
 -- for git hooks files
 vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {pattern="pre-commit", command='set filetype=sh'})
 
